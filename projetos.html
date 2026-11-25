@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- Portfólio pessoal - Projetos -->
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projetos de HTML e CSS feitos por Henrique durante o curso.">
+    <meta name="author" content="Henrique">
+
+    <title>Projetos | Henrique</title>
+
+    <link rel="icon" href="foto.jpeg" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Menu (igual em todas as páginas) -->
+    <header>
+        <a class="logo" href="index.html">👨‍💻 Henrique | Portfólio</a>
+
+        <div class="acoes">
+            <button id="botao-tema" type="button" title="Alternar entre tema claro e escuro">🌙</button>
+            <button id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        </div>
+
+        <nav aria-label="Menu principal">
+            <ul id="menu-lista">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a class="ativo" href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h1>💼 Meus Projetos</h1>
+            <p>
+                Estes são os trabalhos que fiz nas aulas de HTML e CSS. Cada um me ajudou
+                a praticar um assunto diferente.
+            </p>
+        </section>
+
+        <section>
+            <h2>🚀 Trabalhos feitos</h2>
+            <div class="cards">
+
+                <article class="card">
+                    <h3>🚗 Página sobre a BMW</h3>
+                    <p>
+                        Página com a história da marca, listas, links, imagem e menu,
+                        feita com tags semânticas.
+                    </p>
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                </article>
+
+                <article class="card">
+                    <h3>🏎️ Cards de modelos BMW</h3>
+                    <p>
+                        Seis cards com imagem, título e descrição, layout em grid,
+                        animações e efeito hover.
+                    </p>
+                    <span class="tag">Grid</span>
+                    <span class="tag">Flexbox</span>
+                    <span class="tag">Animação</span>
+                </article>
+
+                <article class="card">
+                    <h3>📅 Tabelas</h3>
+                    <p>
+                        Tabela da minha rotina semanal e tabela de jogos, usando
+                        colspan, rowspan e bordas estilizadas.
+                    </p>
+                    <span class="tag">Tabelas</span>
+                    <span class="tag">CSS</span>
+                </article>
+
+                <article class="card">
+                    <h3>📝 Formulário de cadastro</h3>
+                    <p>
+                        Formulário com validação do HTML5, ícones nos campos e efeitos
+                        de foco e hover.
+                    </p>
+                    <span class="tag">Formulário</span>
+                    <span class="tag">Validação</span>
+                </article>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="tabela-container">
+                <table>
+                    <caption>Resumo dos projetos</caption>
+                    <thead>
+                        <tr>
+                            <th>Projeto</th>
+                            <th>Tecnologias</th>
+                            <th>O que pratiquei</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Página sobre a BMW</td>
+                            <td>HTML e CSS</td>
+                            <td>Tags semânticas, listas, links, imagem e estilização básica</td>
+                        </tr>
+                        <tr>
+                            <td>Cards de modelos BMW</td>
+                            <td>HTML e CSS</td>
+                            <td>Grid, flexbox, position, responsividade e animações</td>
+                        </tr>
+                        <tr>
+                            <td>Tabelas</td>
+                            <td>HTML e CSS</td>
+                            <td>caption, colspan, rowspan e bordas</td>
+                        </tr>
+                        <tr>
+                            <td>Formulário de cadastro</td>
+                            <td>HTML e CSS</td>
+                            <td>Tipos de input, validação HTML5, :focus e :invalid</td>
+                        </tr>
+                        <tr>
+                            <td>Portfólio (este site)</td>
+                            <td>HTML, CSS e JavaScript</td>
+                            <td>Várias páginas, tema escuro, menu e formulário com JavaScript</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                <a class="botao" href="https://github.com/HenriqueMorita27" target="_blank" rel="noopener">Ver no GitHub</a>
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Rodapé (igual em todas as páginas) -->
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/henrique-morita-74a485434/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/HenriqueMorita27" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&to=henrique.morita2711@gmail.com" target="_blank" rel="noopener">Gmail</a></li>
+        </ul>
+        <p>&copy; Henrique - Atividade Final.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

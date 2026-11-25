@@ -1,0 +1,528 @@
+/* ===== Cores do site (tema claro e tema escuro) ===== */
+:root {
+    --fundo: #eaf2fa;
+    --texto: #222222;
+    --card: #ffffff;
+    --destaque: #0066b1;
+    --titulo: #003d6b;
+    --link: #0066b1;
+    --borda: #9db7cf;
+    --linha-tabela: #d7e8f8;
+}
+
+/* A classe tema-escuro é colocada no body pelo JavaScript */
+body.tema-escuro {
+    --fundo: #10161d;
+    --texto: #e8eef4;
+    --card: #1b2530;
+    --titulo: #7fc0ff;
+    --link: #7fc0ff;
+    --borda: #33475a;
+    --linha-tabela: #24323f;
+}
+
+/* ===== Estilos gerais ===== */
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: var(--titulo);
+}
+
+h1 {
+    font-size: 44px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 0 10px 0;
+}
+
+h2 {
+    display: inline-block;
+    font-size: 30px;
+    border-bottom: 3px solid var(--destaque);
+    padding-bottom: 4px;
+}
+
+h3 {
+    font-size: 22px;
+    margin: 0 0 8px 0;
+}
+
+a {
+    color: var(--link);
+}
+
+strong {
+    color: var(--titulo);
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+section {
+    margin-bottom: 40px;
+    animation: aparecer 0.8s;
+}
+
+/* ===== Menu (header) ===== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 30px;
+    background-color: #1c1c1c;
+    border-bottom: 5px solid #0066b1;
+}
+
+.logo {
+    color: #ffffff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+nav {
+    order: 2;
+}
+
+.acoes {
+    order: 3;
+    display: flex;
+    gap: 8px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 6px 16px;
+    border: 2px solid #0066b1;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a.ativo {
+    background-color: #0066b1;
+}
+
+/* Botões do menu (tema e menu do celular) */
+#botao-tema,
+#botao-menu {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #0066b1;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#botao-tema:hover,
+#botao-menu:hover {
+    background-color: #0066b1;
+}
+
+/* O botão do menu só aparece no celular */
+#botao-menu {
+    display: none;
+}
+
+/* ===== Início (hero e foto) ===== */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 30px;
+    background-color: var(--card);
+    border: 2px solid var(--borda);
+    border-radius: 15px;
+}
+
+.foto {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+.foto img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    background-color: #ffffff;
+    border: 5px solid var(--destaque);
+    border-radius: 50%;
+}
+
+.foto figcaption {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.hero-texto {
+    flex: 1;
+    min-width: 260px;
+}
+
+#saudacao {
+    margin: 0;
+    color: var(--destaque);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.subtitulo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ===== Botões ===== */
+.botao {
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+    padding: 10px 22px;
+    background-color: var(--destaque);
+    color: #ffffff;
+    border: 2px solid #003d6b;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.botao:hover {
+    background-color: #003d6b;
+    transform: translateY(-3px);
+}
+
+.botao-secundario {
+    background-color: var(--card);
+    color: var(--destaque);
+}
+
+.botao-secundario:hover {
+    color: #ffffff;
+}
+
+/* ===== Cards (grid) ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.cards-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+    padding: 18px 22px;
+    background-color: var(--card);
+    border: 2px solid var(--borda);
+    border-left: 8px solid var(--destaque);
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 18px rgba(0, 61, 107, 0.35);
+}
+
+.tag {
+    display: inline-block;
+    margin: 4px 4px 0 0;
+    padding: 2px 12px;
+    background-color: var(--destaque);
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* ===== Tabelas ===== */
+.tabela-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 25px;
+    background-color: var(--card);
+    border: 3px solid var(--destaque);
+    border-collapse: collapse;
+}
+
+caption {
+    padding-bottom: 10px;
+    color: var(--titulo);
+    font-family: 'Oswald', sans-serif;
+    font-size: 26px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid var(--borda);
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--destaque);
+    color: #ffffff;
+}
+
+tbody th {
+    color: var(--titulo);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--linha-tabela);
+}
+
+progress {
+    width: 100%;
+    height: 16px;
+}
+
+ol, ul {
+    line-height: 2;
+}
+
+/* ===== Contato (formulário) ===== */
+.contato {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+form fieldset {
+    padding: 15px 20px 20px 20px;
+    background-color: var(--card);
+    border: 2px solid var(--borda);
+    border-radius: 12px;
+}
+
+legend {
+    padding: 0 8px;
+    color: var(--titulo);
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    color: var(--titulo);
+    font-weight: bold;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    width: 100%;
+    margin: 6px 0;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: var(--card);
+    color: var(--texto);
+    border: 2px solid var(--borda);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--destaque);
+    box-shadow: 0 0 6px var(--destaque);
+}
+
+textarea {
+    resize: vertical;
+}
+
+#contador {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+    text-align: right;
+}
+
+/* Mensagem escrita pelo JavaScript */
+#resposta {
+    margin: 12px 0 0 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#resposta:empty {
+    display: none;
+}
+
+#resposta.sucesso {
+    background-color: #d4f5dd;
+    color: #14532d;
+}
+
+#resposta.erro {
+    background-color: #fde2e2;
+    color: #7f1d1d;
+}
+
+.links-contato {
+    align-self: start;
+    padding: 15px 25px;
+    background-color: var(--card);
+    border: 3px dotted var(--destaque);
+    border-radius: 12px;
+}
+
+.links-contato ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* ===== Rodapé (footer) ===== */
+footer {
+    padding: 20px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    text-align: center;
+    border-top: 5px solid #0066b1;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+footer a {
+    color: #4da3ff;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ===== Animações ===== */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flutuar {
+    0%   { top: 0; }
+    50%  { top: -10px; }
+    100% { top: 0; }
+}
+
+/* ===== Responsividade ===== */
+
+/* Tablet */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .cards-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Celular */
+@media (max-width: 700px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    #botao-menu {
+        display: inline-block;
+    }
+
+    .acoes {
+        order: 2;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    /* Classe colocada pelo JavaScript ao clicar no botão do menu */
+    nav ul.aberto {
+        display: flex;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards,
+    .cards-3,
+    .contato {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    caption {
+        font-size: 22px;
+    }
+}

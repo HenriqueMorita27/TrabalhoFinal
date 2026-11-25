@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!-- Portfólio pessoal - Página inicial -->
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Henrique, estudante de Engenharia de Software.">
+    <meta name="author" content="Henrique">
+
+    <title>Henrique | Portfólio</title>
+
+    <link rel="icon" href="foto.jpeg" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Menu (igual em todas as páginas) -->
+    <header>
+        <a class="logo" href="index.html">👨‍💻 Henrique | Portfólio</a>
+
+        <div class="acoes">
+            <button id="botao-tema" type="button" title="Alternar entre tema claro e escuro">🌙</button>
+            <button id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        </div>
+
+        <nav aria-label="Menu principal">
+            <ul id="menu-lista">
+                <li><a class="ativo" href="index.html">Início</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <figure class="foto">
+                <img src="foto.jpeg" alt="Foto de perfil de Henrique" width="220" height="220">
+                <figcaption>Henrique Morita</figcaption>
+            </figure>
+
+            <div class="hero-texto">
+                <!-- O JavaScript troca este texto conforme a hora do dia -->
+                <p id="saudacao">Olá! Meu nome é</p>
+                <h1>Henrique Morita</h1>
+                <p class="subtitulo">Estudante de Engenharia de Software na UniFil</p>
+                <p>
+                    Estou no primeiro ano do curso, aprendendo a criar sites e sistemas.
+                    Neste portfólio você encontra a minha formação, os projetos que já fiz
+                    e as formas de entrar em contato comigo.
+                </p>
+                <a class="botao" href="projetos.html">Ver projetos</a>
+                <a class="botao botao-secundario" href="contato.html">Entrar em contato</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>📖 Sobre mim</h2>
+            <article>
+                <p>
+                    Moro em <strong>Londrina, Paraná</strong> e estudo <strong>Engenharia de Software</strong>
+                    na <em>Universidade Filadélfia (UniFil)</em>. No curso, estudo Java, álgebra linear,
+                    gestão de projetos, metodologias ágeis e modelagem de processos de negócio.
+                </p>
+                <p>
+                    Gosto de aprender na prática: já criei páginas com HTML e CSS, como cards, tabelas
+                    e formulários, e agora estou começando com <strong>JavaScript</strong>.
+                </p>
+            </article>
+
+            <div class="tabela-container">
+                <table>
+                    <caption>Resumo rápido</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Nome</th>
+                            <td>Henrique</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Curso</th>
+                            <td>Engenharia de Software (1º ano)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Instituição</th>
+                            <td>UniFil - Universidade Filadélfia</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Cidade</th>
+                            <td>Londrina - PR</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>⭐ Interesses</h2>
+            <div class="cards cards-3">
+                <article class="card">
+                    <h3>💻 Programação</h3>
+                    <p>Criar páginas, resolver exercícios e aprender uma nova linguagem a cada semestre.</p>
+                </article>
+                <article class="card">
+                    <h3>🚗 Carros</h3>
+                    <p>Gosto de conhecer a história das marcas, principalmente da BMW.</p>
+                </article>
+                <article class="card">
+                    <h3>🎮 Jogos</h3>
+                    <p>Jogo nas horas livres, como Gran Turismo e Fortnite.</p>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>🧭 Próximos passos</h2>
+            <ol>
+                <li>Aprender JavaScript mais a fundo</li>
+                <li>Usar Git e GitHub nos meus projetos</li>
+                <li>Estudar banco de dados</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <!-- Rodapé (igual em todas as páginas) -->
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/henrique-morita-74a485434/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/HenriqueMorita27" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&to=henrique.morita2711@gmail.com" target="_blank" rel="noopener">Gmail</a></li>
+        </ul>
+        <p>&copy; Henrique - Atividade Final.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Portfólio pessoal - Contato -->
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formas de entrar em contato com Henrique.">
+    <meta name="author" content="Henrique">
+
+    <title>Contato | Henrique</title>
+
+    <link rel="icon" href="foto.jpeg" type="image/jpeg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Menu (igual em todas as páginas) -->
+    <header>
+        <a class="logo" href="index.html">👨‍💻 Henrique | Portfólio</a>
+
+        <div class="acoes">
+            <button id="botao-tema" type="button" title="Alternar entre tema claro e escuro">🌙</button>
+            <button id="botao-menu" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        </div>
+
+        <nav aria-label="Menu principal">
+            <ul id="menu-lista">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a class="ativo" href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <h1>📬 Contato</h1>
+            <p>
+                Quer conversar, tirar uma dúvida ou falar sobre um projeto?
+                Mande uma mensagem pelo formulário ou use um dos links abaixo.
+            </p>
+        </section>
+
+        <section class="contato">
+
+            <!-- novalidate: a validação é feita pelo JavaScript (script.js) -->
+            <form id="formulario-contato" action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Envie uma mensagem</legend>
+
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="contatoNome" placeholder="Seu nome" maxlength="50">
+
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="contatoEmail" placeholder="exemplo@email.com">
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="contatoMensagem" rows="5" maxlength="300"
+                              placeholder="Escreva sua mensagem"></textarea>
+                    <p id="contador">0/300</p>
+
+                    <button class="botao" type="submit">Enviar mensagem</button>
+
+                    <!-- O JavaScript escreve aqui a resposta -->
+                    <p id="resposta"></p>
+                </fieldset>
+            </form>
+
+            <aside class="links-contato">
+                <h2>🔗 Meus links</h2>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/henrique-morita-74a485434/" target="_blank" rel="noopener">💼 LinkedIn</a></li>
+                    <li><a href="https://github.com/HenriqueMorita27" target="_blank" rel="noopener">🐙 GitHub</a></li>
+                    <li><a href="https://mail.google.com/mail/?view=cm&to=henrique.morita2711@gmail.com" target="_blank" rel="noopener">✉️ Gmail</a></li>
+                </ul>
+                <p>📍 Londrina - Paraná, Brasil</p>
+            </aside>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé (igual em todas as páginas) -->
+    <footer>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/henrique-morita-74a485434/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/HenriqueMorita27" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://mail.google.com/mail/?view=cm&to=henrique.morita2711@gmail.com" target="_blank" rel="noopener">Gmail</a></li>
+        </ul>
+        <p>&copy; Henrique - Atividade Final.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
